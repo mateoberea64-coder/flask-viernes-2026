@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1>Respuestas recibidas</h1>
+    <h3>Total de mensajes: {{mensajes|length}}</h3>
+    {% if mensajes %}
+        {% for mensaje in mensajes %}
+        <div>
+            <h3>{{mensaje.nombre}}</h3>
+            <p>{{mensaje.mensaje}}</p>
+        </div>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
